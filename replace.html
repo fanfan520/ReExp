@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var str='dddjjjjddnjklad';
+			var re=/d+|k+/g;
+		//	alert(str.match(re));
+			alert(str.replace(re,function(str){
+				var result='';
+				for (var i=0;i<str.length;i++) {
+					result+='s';
+				}
+				return result;
+			}));
+			//alert(str);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

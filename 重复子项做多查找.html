@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var str='aadddjkkjhgjknfjkajlxaaaajjaaaaaaala';
+			var arr=str.split('');
+			str=arr.sort().join('');
+			var re=/(\w)\1+/g;
+			var index=0;
+			var value='';
+			str.replace(re,function (s0,s1) {
+			//	alert(s0);
+				if (index<s0.length) {
+					index=s0.length;
+					value=s1;
+				}
+			});
+			alert(value+','+index);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

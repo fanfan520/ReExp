@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var otx=document.getElementsByTagName('textarea');
+				var obt=document.getElementById('bt');
+				obt.onclick=function(){
+					var str=otx[0].value;
+					otx[1].value=str.replace(/陈水扁|台独/g,function(a){
+						var result='';
+						for (var i=0;i<a.length;i++) {
+							result+='*';
+						}
+						return result;
+					})
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<textarea rows="10" cols="40"></textarea><br />
+		<textarea rows="10" cols="40"></textarea><br />
+		<input type="button" id="bt" value="提交" />
+		
+	</body>
+</html>

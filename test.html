@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			//去掉大写字母
+//			var str='dhhhh;sDDDffGG';
+//			var re=/[A-Z]+/g;
+//			alert(str.replace(re,''));
+//			//去掉数字
+//          var str='dhh666fGfff663G';
+//			var re=/[0-9]+/g;
+//			alert(str.replace(re,''));
+			//转驼峰匹配
+//          var str='border-top-color';
+//			var re=/-(\w)/g;
+//			var nw=str.replace(re,function (s0,s1) {
+//				return s1.toUpperCase();
+//			})
+//			alert(nw);
+			//这个正则要求密码长度最少12位，包含至少1个特殊字符，2个数字，2个大写字母和一些小写字母。
+			var pass='@11RRweiwei520';
+			var re=/(([_@]+)(\d{2,})([A-Z]{2,})([a-z]+)){12,}/;
+			alert(re.test(pass));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

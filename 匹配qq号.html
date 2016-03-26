@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var obt=document.getElementById('bt');
+				var otxt=document.getElementById('txt');
+				var re=/^[1-9]\d{4,11}$/;
+				obt.onclick=function(){
+					if (re.test(otxt.value)) {
+						alert('是QQ号');
+					}else{
+						alert('不是QQ号');
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="txt" /><input type="button" id="bt" value="按钮" />
+	</body>
+</html>

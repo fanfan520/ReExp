@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var str='   fff lgg  ll    ';
+			alert('('+str+')');
+			alert('('+clearSpaceHF(str)+')');
+			alert('('+clearSpace(str)+')')
+			//去掉开头和结尾的空格
+			function clearSpaceHF(str) {
+				var re=/^\s+|\s+$/g;
+				return str.replace(re,'');
+			}
+			//去掉所有空格
+			function clearSpace(str){
+				var re=/\s+/g;
+				return str.replace(re,'');
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

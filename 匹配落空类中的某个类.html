@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oul=document.getElementsByTagName('ul')[0];
+				var oli=getClassByBox1(oul,'box1');
+				for (var i=0;i<oli.length;i++) {
+					oli[i].style.background='red';
+				}
+				function getClassByBox1(pr,cname){
+					var result=[];
+					ali=pr.getElementsByTagName('li');
+					var reg=new RegExp('\\b'+cname+'\\b');
+					for (var i=0; i<ali.length; i++) {
+						if (reg.test(ali[i].className)) {
+							result.push(ali[i]);
+						}
+					}
+					return result;
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li class="box1"></li>
+			<li class="box1box2"></li>
+			<li class="box1 box2"></li>
+			<li class="box2"></li>
+			<li class="box1"></li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//找微信红包个数最多的那个红包
+			var redPaper=['6.66','1.23','6.66','5.20','8.88','13.14','6.66','8.88','6.66','6.66','9.99','6.66','1.23','5.20'];
+			var str=redPaper.sort().join(' ')+' ';
+			var re=/(\b\d+\.\d+\s)\1*/g;
+			var more=0;
+			var value=0;
+			str.replace(re,function(s0){
+				var tmp=s0.substring(0,s0.length-1).split(' ');			
+				if (more<tmp.length) {
+					more=tmp.length;
+					value=tmp[0];
+				}
+			});
+			alert('最多的微信红包：'+value+'，数目：'+more);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
